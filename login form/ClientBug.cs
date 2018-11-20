@@ -15,6 +15,7 @@ namespace login_form
     {
         public SessionModel session { get; set; }
         Image img;
+
         public ClientBug()
         {
             InitializeComponent();
@@ -46,12 +47,12 @@ namespace login_form
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     img = Image.FromFile(dialog.FileName);
-                    //image1.Image = img;
+                    pictureBox1.Image = img;
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error Occured");
+                MessageBox.Show("Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -71,7 +72,7 @@ namespace login_form
                     Title = textBox1.Text.Trim(),
                     Description = richTextBox1.Text.Trim(),
                     Image = ms.ToArray(),
-                    IssueStatus = "pending",
+                    IssueStatus = "Pending",
                     InsertedBy = session.UserName
                 };
                 bte.Issues.Add(InsIssue);
@@ -82,6 +83,11 @@ namespace login_form
             {
                 MessageBox.Show("Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

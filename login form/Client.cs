@@ -107,5 +107,12 @@ namespace login_form
             cb.MdiParent = this;
             cb.Show();
         }
+
+        private void viewSolutionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientBugBack cbb = new ClientBugBack(session);
+            cbb.MdiParent = this;
+            cbb.Show();
+        }
     }
 }
