@@ -26,7 +26,9 @@ namespace login_form
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProBug pb = new ProBug();
+            ProBug pb = new ProBug(session);
+            pb.MdiParent= this;
+            pb.Show();
         }
     }
 }

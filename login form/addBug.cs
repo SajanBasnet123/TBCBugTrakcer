@@ -83,20 +83,31 @@ namespace login_form
                 var data = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();
                 data.Description = richTextBox1.Text;
                 data.SolvedBy = comboBox2.Text;
-                if (data.IssueStatus == "ReOpened")
+                //if (data.IssueStatus == "ReOpened")
+                //{
+                //    MessageBox.Show("Issue is already Re-Opened", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+                //else
+                //{
+                //    if (checkBox1.Checked)
+                //    {
+                //        data.IssueStatus = "ReOpened";
+                //    }
+                //    bte.Entry(data).State = EntityState.Modified;
+                //    bte.SaveChanges();
+                //    MessageBox.Show("Saved");
+                //}
+                //
+
+
+                //delete the code below After uncommenting above
+                if (checkBox1.Checked)
                 {
-                    MessageBox.Show("Issue is already Re-Opened", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    data.IssueStatus = "ReOpened";
                 }
-                else
-                {
-                    if (checkBox1.Checked)
-                    {
-                        data.IssueStatus = "ReOpened";
-                    }
-                    bte.Entry(data).State = EntityState.Modified;
-                    bte.SaveChanges();
-                    MessageBox.Show("Saved");
-                }
+                bte.Entry(data).State = EntityState.Modified;
+                bte.SaveChanges();
+                MessageBox.Show("Saved");
             }
             catch (Exception)
             {
