@@ -46,7 +46,7 @@ namespace login_form
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     img = Image.FromFile(dialog.FileName);
-                    image1.Image = img;
+                    //image1.Image = img;
                 }
             }
             catch (Exception)

@@ -61,7 +61,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "E&XIT";
             this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -100,7 +100,6 @@
             this.label3.Size = new System.Drawing.Size(92, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "LOGIN";
-           // this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 

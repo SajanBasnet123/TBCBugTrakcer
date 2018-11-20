@@ -45,7 +45,9 @@ namespace login_form
                 }
                 else
                 {
-
+                    Programmer p = new Programmer(session);
+                    this.Hide();
+                    p.Show();
                 }
             }
             
@@ -53,6 +55,11 @@ namespace login_form
             {
                 MessageBox.Show("Invalid Username and Password");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

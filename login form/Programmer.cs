@@ -12,9 +12,16 @@ namespace login_form
 {
     public partial class Programmer : Form
     {
+        public SessionModel session { get; set; }
         public Programmer()
         {
             InitializeComponent();
+        }
+
+        public Programmer(SessionModel sm)
+        {
+            InitializeComponent();
+            session = sm;
         }
     }
 }
