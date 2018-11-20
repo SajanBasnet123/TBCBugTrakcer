@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b8a65a99f6824cae91f6fa29ff26cb6b" Name="Diagram1">
-        <EntityTypeShape EntityType="BugTrackerModel.Person" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="cd96617f5754471dadc1ebf4b4fe5bb2" Name="Diagram1" ZoomLevel="13">
+        <EntityTypeShape EntityType="BugTrackerModel.Issue" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BugTrackerModel.Person" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -70,11 +70,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addBug.Designer.cs">
+      <DependentUpon>addBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientBug.Designer.cs">
+      <DependentUpon>ClientBug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBugBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientBugBack.Designer.cs">
+      <DependentUpon>ClientBugBack.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -106,6 +130,12 @@
     <Compile Include="Person.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProBug.Designer.cs">
+      <DependentUpon>ProBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Programmer.cs">
       <SubType>Form</SubType>
@@ -114,14 +144,29 @@
       <DependentUpon>Programmer.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addBug.resx">
+      <DependentUpon>addBug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientBug.resx">
+      <DependentUpon>ClientBug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientBugBack.resx">
+      <DependentUpon>ClientBugBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProBug.resx">
+      <DependentUpon>ProBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Programmer.resx">
       <DependentUpon>Programmer.cs</DependentUpon>
