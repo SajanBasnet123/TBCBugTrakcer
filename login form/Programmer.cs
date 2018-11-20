@@ -23,5 +23,10 @@ namespace login_form
             InitializeComponent();
             session = sm;
         }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProBug pb = new ProBug();
+        }
     }
 }

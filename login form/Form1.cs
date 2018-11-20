@@ -34,7 +34,7 @@ namespace login_form
                 if(person.Role=="admin")
                 {
                     this.Hide();
-                    admin ss = new admin();
+                    admin ss = new admin(session);
                     ss.Show();
                 }
                 else if(person.Role=="client")

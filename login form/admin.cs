@@ -12,9 +12,29 @@ namespace login_form
 {
     public partial class admin : Form
     {
+        public SessionModel session { get; set; }
         public admin()
         {
             InitializeComponent();
+        }
+
+        public admin(SessionModel sm)
+        {
+            InitializeComponent();
+            session = sm;
+        }
+        private void viewIssueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addBug ab = new addBug(session);
+            ab.MdiParent = this;
+            ab.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f = new Form1();
+            f.Show();
         }
     }
 }

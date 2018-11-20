@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,21 +71,39 @@ namespace login_form
                 string solution = (string)sdr["Solution"].ToString();
                 richTextBox2.Text = solution;
 
-                BugTrackerEntities bte = new BugTrackerEntities();
+                BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var item = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();
-                if (item.IssueStatusId == 4)
-                {
-                    textBox1.Text = "Pending";
-                }
-                else
-                {
-                    textBox1.Text = "Closed";
-                }
+                textBox1.Text = item.IssueStatus;
                 byte[] arr = item.Image;
                 MemoryStream ms = new MemoryStream(arr);
                 pictureBox1.Image = Image.FromStream(ms);
             }
             con.Close();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

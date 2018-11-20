@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,17 +58,12 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // gitToolStripMenuItem
-            // 
-            this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
-            this.gitToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
-            this.gitToolStripMenuItem.Text = "Git";
-            // 
             // viewIssueToolStripMenuItem
             // 
             this.viewIssueToolStripMenuItem.Name = "viewIssueToolStripMenuItem";
             this.viewIssueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewIssueToolStripMenuItem.Text = "View Issue";
+            this.viewIssueToolStripMenuItem.Click += new System.EventHandler(this.viewIssueToolStripMenuItem_Click);
             // 
             // registerToolStripMenuItem
             // 
@@ -81,6 +76,13 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // gitToolStripMenuItem
+            // 
+            this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
+            this.gitToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
+            this.gitToolStripMenuItem.Text = "Git";
             // 
             // admin
             // 
