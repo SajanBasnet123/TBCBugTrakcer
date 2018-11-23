@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace login_form
 {
+    //initiate registrate form
     public partial class REGISTER : Form
     {
         public REGISTER()
@@ -31,14 +32,23 @@ namespace login_form
         {
 
         }
-
+        //exit  application
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text==""||textBox2.Text==""||textBox3.Text=="")
+            
+            Application.Exit();
+          
+        }
+
+        //Procedure to Saves client
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
             {
                 MessageBox.Show("One or More Fields are empty");
             }
-            else if(textBox2.Text != textBox3.Text)
+            else if (textBox2.Text != textBox3.Text)
             {
                 MessageBox.Show("Password Do not Match");
             }
@@ -47,9 +57,9 @@ namespace login_form
                 BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var data = new Person
                 {
-                    UserName=textBox1.Text,
-                    Password=textBox2.Text,
-                    Role= "client"
+                    UserName = textBox1.Text,
+                    Password = textBox2.Text,
+                    Role = "Client"
                 };
                 bte.People.Add(data);
                 bte.SaveChanges();

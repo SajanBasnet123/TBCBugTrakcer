@@ -94,5 +94,10 @@ namespace login_form
         {
 
         }
+
+        private void ClientBug_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

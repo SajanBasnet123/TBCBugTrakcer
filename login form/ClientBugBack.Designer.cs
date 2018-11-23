@@ -126,6 +126,7 @@
             this.textEditorControl1.Name = "textEditorControl1";
             this.textEditorControl1.Size = new System.Drawing.Size(273, 132);
             this.textEditorControl1.TabIndex = 9;
+            this.textEditorControl1.Load += new System.EventHandler(this.textEditorControl1_Load);
             // 
             // textEditorControl2
             // 

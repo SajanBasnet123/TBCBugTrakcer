@@ -136,6 +136,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "ClientBug";
             this.Text = "ClientBug";
+            this.Load += new System.EventHandler(this.ClientBug_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

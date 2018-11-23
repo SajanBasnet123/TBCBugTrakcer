@@ -179,5 +179,10 @@ namespace login_form
                 textEditorControl1.SetHighlighting("C#");
             }
         }
+
+        private void addBug_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

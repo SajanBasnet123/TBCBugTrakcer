@@ -18,7 +18,7 @@ namespace login_form
         {
             InitializeComponent();
         }
-
+        //initial login processor
         private void button2_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\BugTracker.mdf;Integrated Security=True;Connect Timeout=30;");
@@ -56,7 +56,7 @@ namespace login_form
                 MessageBox.Show("Invalid Username and Password");
             }
         }
-
+        //exist the program
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -70,6 +70,13 @@ namespace login_form
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        //open register page
+        private void button3_Click(object sender, EventArgs e)
+        {
+            REGISTER r = new REGISTER();
+            this.Hide();
+            r.Show();
         }
     }
 }

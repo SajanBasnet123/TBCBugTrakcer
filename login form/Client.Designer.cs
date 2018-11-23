@@ -100,6 +100,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Client";
             this.Text = "Client";
+            this.Load += new System.EventHandler(this.Client_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

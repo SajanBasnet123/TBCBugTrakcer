@@ -27,6 +27,7 @@ namespace login_form
             fillComboBox();
         }
 
+        //Fills data in combo box
         void fillComboBox()
         {
             try
@@ -55,6 +56,8 @@ namespace login_form
 
         }
 
+
+        //Changes data when Combo box is changed
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\BugTracker.mdf;Integrated Security=True;Connect Timeout=30");
@@ -66,7 +69,7 @@ namespace login_form
             while (sdr.Read())
             {
                 string description = (string)sdr["Description"].ToString();
-                textEditorControl2.Text = description;
+                textEditorControl1.Text = description;
 
                 string solution = (string)sdr["Solution"].ToString();
                 textEditorControl2.Text = solution;
@@ -104,6 +107,12 @@ namespace login_form
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+       
+        private void textEditorControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

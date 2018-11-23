@@ -204,6 +204,7 @@
             this.Controls.Add(this.label1);
             this.Name = "addBug";
             this.Text = "addBug";
+            this.Load += new System.EventHandler(this.addBug_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

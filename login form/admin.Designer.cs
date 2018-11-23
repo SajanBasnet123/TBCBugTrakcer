@@ -84,6 +84,7 @@
             this.gitToolStripMenuItem.Name = "gitToolStripMenuItem";
             this.gitToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
             this.gitToolStripMenuItem.Text = "Git";
+            this.gitToolStripMenuItem.Click += new System.EventHandler(this.gitToolStripMenuItem_Click);
             // 
             // admin
             // 
@@ -95,6 +96,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "admin";
             this.Text = "admin";
+            this.Load += new System.EventHandler(this.admin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
