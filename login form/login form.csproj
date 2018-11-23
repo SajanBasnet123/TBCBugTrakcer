@@ -78,6 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add reg.Designer.cs">
+      <DependentUpon>add reg.cs</DependentUpon>
+    </Compile>
     <Compile Include="addBug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
       <DependentUpon>REGISTER.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionModel.cs" />
+    <EmbeddedResource Include="add reg.resx">
+      <DependentUpon>add reg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addBug.resx">
       <DependentUpon>addBug.cs</DependentUpon>
     </EmbeddedResource>

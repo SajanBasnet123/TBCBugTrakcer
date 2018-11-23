@@ -82,7 +82,7 @@ namespace login_form
             {
                 BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var data = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();
-                data.Description = richTextBox1.Text;
+                data.Description = textEditorControl1.Text;
                 data.SolvedBy = comboBox2.Text;
                 //if (data.IssueStatus == "ReOpened")
                 //{
@@ -127,10 +127,10 @@ namespace login_form
             while (sdr.Read())
             {
                 string description = (string)sdr["Description"].ToString();
-                richTextBox1.Text = description;
+                textEditorControl1.Text = description;
 
                 string solution = (string)sdr["Solution"].ToString();
-                richTextBox2.Text = solution;
+                textEditorControl2.Text = solution;
                 
                 BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var item = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();

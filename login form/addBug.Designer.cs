@@ -33,8 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -42,6 +40,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textEditorControl1 = new ICSharpCode.TextEditor.TextEditorControl();
+            this.textEditorControl2 = new ICSharpCode.TextEditor.TextEditorControl();
+            this.textEditorControl3 = new ICSharpCode.TextEditor.TextEditorControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,24 +93,6 @@
             this.comboBox1.Size = new System.Drawing.Size(185, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(151, 98);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(273, 96);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(151, 247);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(273, 96);
-            this.richTextBox2.TabIndex = 2;
-            this.richTextBox2.Text = "";
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -176,11 +158,29 @@
             // textEditorControl1
             // 
             this.textEditorControl1.IsReadOnly = false;
-            this.textEditorControl1.Location = new System.Drawing.Point(442, 278);
+            this.textEditorControl1.Location = new System.Drawing.Point(151, 59);
             this.textEditorControl1.Name = "textEditorControl1";
             this.textEditorControl1.Size = new System.Drawing.Size(249, 182);
             this.textEditorControl1.TabIndex = 7;
             this.textEditorControl1.Load += new System.EventHandler(this.textEditorControl1_Load);
+            // 
+            // textEditorControl2
+            // 
+            this.textEditorControl2.IsReadOnly = false;
+            this.textEditorControl2.Location = new System.Drawing.Point(442, 273);
+            this.textEditorControl2.Name = "textEditorControl2";
+            this.textEditorControl2.Size = new System.Drawing.Size(249, 182);
+            this.textEditorControl2.TabIndex = 7;
+            this.textEditorControl2.Load += new System.EventHandler(this.textEditorControl1_Load);
+            // 
+            // textEditorControl3
+            // 
+            this.textEditorControl3.IsReadOnly = false;
+            this.textEditorControl3.Location = new System.Drawing.Point(151, 273);
+            this.textEditorControl3.Name = "textEditorControl3";
+            this.textEditorControl3.Size = new System.Drawing.Size(249, 182);
+            this.textEditorControl3.TabIndex = 7;
+            this.textEditorControl3.Load += new System.EventHandler(this.textEditorControl1_Load);
             // 
             // addBug
             // 
@@ -188,14 +188,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(703, 577);
+            this.Controls.Add(this.textEditorControl2);
+            this.Controls.Add(this.textEditorControl3);
             this.Controls.Add(this.textEditorControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
@@ -217,8 +217,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -226,5 +224,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private ICSharpCode.TextEditor.TextEditorControl textEditorControl1;
+        private ICSharpCode.TextEditor.TextEditorControl textEditorControl2;
+        private ICSharpCode.TextEditor.TextEditorControl textEditorControl3;
     }
 }

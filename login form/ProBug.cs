@@ -67,10 +67,10 @@ namespace login_form
             while (sdr.Read())
             {
                 string description = (string)sdr["Description"].ToString();
-                richTextBox3.Text = description;
+                textEditorControl1.Text = description;
 
                 string solution = (string)sdr["Solution"].ToString();
-                richTextBox4.Text = solution;
+                textEditorControl1.Text = solution;
 
                 BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var item = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();
@@ -97,7 +97,7 @@ namespace login_form
             {
                 BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var data = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();
-                data.Solution = richTextBox4.Text;
+                data.Solution = textEditorControl1.Text;
                 data.IssueStatus = "Pending";
                 bte.Entry(data).State = EntityState.Modified;
                 bte.SaveChanges();

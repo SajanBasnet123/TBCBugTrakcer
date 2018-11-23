@@ -58,7 +58,7 @@ namespace login_form
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Trim() == "" || richTextBox1.Text.Trim() == "")
+            if (textBox1.Text.Trim() == "" || textEditorControl1.Text.Trim() == "")
             {
                 MessageBox.Show("One or More Fields Are Empty");
             }
@@ -70,7 +70,7 @@ namespace login_form
                 var InsIssue = new Issue
                 {
                     Title = textBox1.Text.Trim(),
-                    Description = richTextBox1.Text.Trim(),
+                    Description = textEditorControl1.Text.Trim(),
                     Image = ms.ToArray(),
                     IssueStatus = "Pending",
                     InsertedBy = session.UserName

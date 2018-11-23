@@ -66,10 +66,10 @@ namespace login_form
             while (sdr.Read())
             {
                 string description = (string)sdr["Description"].ToString();
-                richTextBox1.Text = description;
+                textEditorControl2.Text = description;
 
                 string solution = (string)sdr["Solution"].ToString();
-                richTextBox2.Text = solution;
+                textEditorControl2.Text = solution;
 
                 BugTrackerEntities1 bte = new BugTrackerEntities1();
                 var item = bte.Issues.Where(a => a.Title == comboBox1.Text).SingleOrDefault();

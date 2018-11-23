@@ -36,5 +36,12 @@ namespace login_form
             Form1 f = new Form1();
             f.Show();
         }
+
+        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add_reg ar = new add_reg();
+            ar.MdiParent = this;
+            ar.Show();
+        }
     }
 }
