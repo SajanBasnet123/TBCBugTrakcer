@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ICSharpCode.TextEditor.Document;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -165,6 +166,18 @@ namespace login_form
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textEditorControl1_Load(object sender, EventArgs e)
+        {
+            string dric = Application.StartupPath;
+            FileSyntaxModeProvider fsmp;
+            if (Directory.Exists(dric))
+            {
+                fsmp = new FileSyntaxModeProvider(dric);
+                HighlightingManager.Manager.AddSyntaxModeFileProvider(fsmp);
+                textEditorControl1.SetHighlighting("C#");
+            }
         }
     }
 }

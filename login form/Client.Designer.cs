@@ -64,6 +64,7 @@
             this.viewRepositioryToolStripMenuItem.Name = "viewRepositioryToolStripMenuItem";
             this.viewRepositioryToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.viewRepositioryToolStripMenuItem.Text = "View Repositiory";
+            this.viewRepositioryToolStripMenuItem.Click += new System.EventHandler(this.viewRepositioryToolStripMenuItem_Click);
             // 
             // viewSolutionToolStripMenuItem
             // 
